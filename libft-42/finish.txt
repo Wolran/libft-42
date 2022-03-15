@@ -1,0 +1,36 @@
+	memset
+	bzero
+	memcpy
+	memccpy
+	memmove
+	memchr
+	memcmp
+	strlen
+	strdup
+	strlcpy
+	strlcat
+	strchr
+	strrchr
+	strnstr
+	strncmp
+	atoi
+	isalpha
+	isdigit
+	isalnum
+	isascii
+	isprint
+	toupper
+	tolower
+	calloc
+ 
+
+	ft_strmapi
+	ft_substr
+	ft_strjoin
+	ft_strtrim
+	ft_split
+	ft_itoa
+	ft_putchar_fd
+	ft_putstr_fd
+	ft_putendl_fd
+	ft_putnbr_fd
