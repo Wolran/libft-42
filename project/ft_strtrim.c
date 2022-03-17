@@ -1,11 +1,11 @@
 #include "libft.h"
 
-static int ft_nbset(char const *str, char const *set)
+static int	ft_nbset(char const *str, char const *set)
 {
-	int i;
-	int count;
-	int j;
-	
+	int	i;
+	int	count;
+	int	j;
+
 	count = 0;
 	i = 0;
 	while (set[i])
@@ -22,7 +22,7 @@ static int ft_nbset(char const *str, char const *set)
 	return (count);
 }
 
-static char *ft_strcpym(char *dest, const char *s1, char const *set)
+static char	*ft_strcpym(char *dest, const char *s1, char const *set)
 {
 	int	i;
 	int	j;
@@ -49,7 +49,7 @@ static char *ft_strcpym(char *dest, const char *s1, char const *set)
 	return (dest);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		len;
 	char	*str;
