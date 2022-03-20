@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static char	*ft_strncpy(char *dest, const char *src, int n)
+static char	*ft_strncpy(char *dest, char *src, int n)
 {
 	int	i;
 
@@ -14,10 +14,11 @@ static char	*ft_strncpy(char *dest, const char *src, int n)
 	return (dest);
 }
 
-static int	ft_countw(const char *s, char c)
+
+static int ft_countw(char *s, char c)
 {
-	int	i;
-	int	count;
+	int i;
+	int count;
 
 	count = 0;
 	i = 1;
@@ -32,11 +33,9 @@ static int	ft_countw(const char *s, char c)
 	return (count);
 }
 
-static int	ft_tmot(const char *str, int index, char c)
+static int ft_tmot(char *str, int index, char c)
 {
-	int	i;
-
-	i = 0;
+	int i = 0;
 	while (str[index + i])
 	{
 		if (str[index + i] == c)
@@ -46,7 +45,7 @@ static int	ft_tmot(const char *str, int index, char c)
 	return (i);
 }
 
-char	**ft_split(const char *s, char c)
+char **ft_split(const char *s, char c)
 {
 	int		i;
 	int		j;
@@ -57,7 +56,7 @@ char	**ft_split(const char *s, char c)
 	i = 0;
 	if (!s)
 		return (0);
-	tab = (char **)malloc(sizeof(char *) * (ft_countw(s, c) + 1));
+	tab = (char **)malloc(sizeof(char*) * (ft_countw(s, c) + 1));
 	if (!tab)
 		return (0);
 	while (s[i])
@@ -65,10 +64,10 @@ char	**ft_split(const char *s, char c)
 		while (s[i] == c)
 			i++;
 		if (s[i] == 0)
-			break ;
+			break;
 		tmot = ft_tmot(s, i, c);
 		tab[j] = (char *)malloc(sizeof(char) * (tmot + 1));
-		tab[j] = ft_strncpy(tab[j++], (char *)s + i, tmot);
+		tab[j] = ft_strncpy(tab[j++], s + i, tmot);
 		i += tmot;
 	}
 	tab[j] = 0;
