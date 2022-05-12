@@ -49,7 +49,7 @@ static char *ft_strcpym(char *dest, const char *s1, const char set)
 	return (dest);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		len;
 	char	*str;

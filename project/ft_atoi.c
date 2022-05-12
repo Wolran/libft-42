@@ -22,13 +22,11 @@ int	ft_atoi(char *str)
 	n = 1;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	while (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			n = n * -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
+    if (str[i] == '-')
+        n = n * -1;
+    if (str[i] == '-' || str[i] == '+')
+        i++;
+	while str[i] >= '0' && str[i] <= '9')
 	{
 		j = j * 10 + (str[i] - '0');
 		i++;

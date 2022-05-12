@@ -45,7 +45,7 @@ static int ft_tmot(char *str, int index, char c)
 	return (i);
 }
 
-char **ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	int		i;
 	int		j;
