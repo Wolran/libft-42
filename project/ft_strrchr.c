@@ -4,6 +4,8 @@ char	*ft_strrchr(const char *str, int y)
 {
 	size_t	i;
 
+	if (!str)
+		return (NULL);
 	i = ft_strlen(str);
 	while (i > 0)
 	{
