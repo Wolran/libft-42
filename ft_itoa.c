@@ -14,12 +14,16 @@
 
 static char	*ft_balek25(char *str, long i, long count)
 {
-	while (count > 0 && str[count - 1] != '-')
+	int	num;
+
+	num = 0;
+	while (count > 0 + num)
 	{
 		if (i < 0)
 		{
 			str[0] = '-';
 			i = i * -1;
+			num = 1;
 		}
 		else
 		{
@@ -63,7 +67,7 @@ char	*ft_itoa(int n)
 #include <stdio.h>
 int main()
 {
-	char *str = ft_itoa(30);
+	char *str = ft_itoa(-30);
 	printf("%s", str);
 }
 */
