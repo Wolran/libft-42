@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	unsigned int	i;
 	unsigned int	j;
 
+	if (!src || !dest)
+		return (0);
 	i = -1;
 	while (++i < size && *dest)
 	{
@@ -29,5 +31,4 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		if (j < size - i - 1)
 			*dest++ = src[j];
 	*dest = '\0';
-	return (i + j);
-}
+	return (i + j)
