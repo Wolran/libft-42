@@ -31,4 +31,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		if (j < size - i - 1)
 			*dest++ = src[j];
 	*dest = '\0';
-	return (i + j)
+	return (i + j);
+}
